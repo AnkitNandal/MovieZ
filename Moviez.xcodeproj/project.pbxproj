@@ -131,8 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				297CB66E211C70E200E39484 /* ParentViewController */,
-				297CB66B211C706600E39484 /* SearchSuggestionViewController */,
 				2952A5082115AEFA003451FC /* SearchViewController */,
+				297CB66B211C706600E39484 /* SearchSuggestionViewController */,
 			);
 			name = ViewControllers;
 			path = "New Group";

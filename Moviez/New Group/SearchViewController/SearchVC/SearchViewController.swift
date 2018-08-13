@@ -76,6 +76,9 @@ extension SearchViewController {
         tableView.backgroundColor = .black
         tableView.estimatedRowHeight = 50
         tableView.rowHeight = UITableViewAutomaticDimension
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = .never
+        } 
         tableView.register(UINib(nibName: MovieListCell.xib, bundle: nil), forCellReuseIdentifier: MovieListCell.identifier)
     }
     
@@ -118,6 +121,9 @@ extension SearchViewController {
      */
     func setupNavBar() {
         self.navigationController?.navigationBar.isTranslucent = false
+        if #available(iOS 11.0, *) {
+            self.navigationController?.navigationBar.prefersLargeTitles = true
+        }
         self.navigationController?.navigationBar.topItem?.title = Constants.searchControllerNavigationTitle
     }
 }

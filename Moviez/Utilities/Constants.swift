@@ -11,7 +11,7 @@ import Foundation
 enum Constants {
     
     static let searchPlaceHolder = "Search movies by title"
-    static let searchControllerNavigationTitle = "Search Movies"
+    static let searchControllerNavigationTitle = "Search"
     
     enum Alert {
         static let noMoviesResultFound = "No movies found with this name. Please try with different search term."

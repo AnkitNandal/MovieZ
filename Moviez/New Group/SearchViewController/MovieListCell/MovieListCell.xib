@@ -32,7 +32,7 @@
                             <constraint firstAttribute="width" constant="46" id="hxa-Wr-Uga"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbM-d3-HdC">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbM-d3-HdC">
                         <rect key="frame" x="64" y="9" width="248" height="17"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="17" id="9GR-8i-0Zf"/>
@@ -41,7 +41,7 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7IF-Zy-JNF">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7IF-Zy-JNF">
                         <rect key="frame" x="64" y="30" width="248" height="16.5"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="eaY-4C-M5L"/>
@@ -50,10 +50,10 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llI-9E-FqS">
-                        <rect key="frame" x="64" y="50.5" width="248" height="16.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llI-9E-FqS">
+                        <rect key="frame" x="64" y="50.5" width="248" height="15"/>
                         <constraints>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16.5" id="0zi-OP-tOu"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="xt8-NW-gQM"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -72,7 +72,7 @@
                     <constraint firstItem="llI-9E-FqS" firstAttribute="leading" secondItem="SFO-KX-aWX" secondAttribute="trailing" constant="10" id="eB6-2w-Edq"/>
                     <constraint firstAttribute="trailing" secondItem="7IF-Zy-JNF" secondAttribute="trailing" constant="8" id="ifY-lk-xSS"/>
                     <constraint firstAttribute="trailing" secondItem="llI-9E-FqS" secondAttribute="trailing" constant="8" id="n22-jy-6Hu"/>
-                    <constraint firstAttribute="bottom" secondItem="llI-9E-FqS" secondAttribute="bottom" constant="19.5" id="r2O-8X-2mh"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="llI-9E-FqS" secondAttribute="bottom" constant="19.5" id="r2O-8X-2mh"/>
                     <constraint firstItem="YbM-d3-HdC" firstAttribute="leading" secondItem="SFO-KX-aWX" secondAttribute="trailing" constant="10" id="v9i-6B-OCl"/>
                 </constraints>
             </tableViewCellContentView>
