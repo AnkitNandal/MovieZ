@@ -20,13 +20,10 @@ Example:
 
 # URL Handler Core Classes:
 Separate dedicated classes are designed to incorporate any changes that are handled at each level.
-    -KService
-    -KResponse
-    -RequestBody
-    -KRequest
-    -NetworkError
-    -KServiceConfig.
 
- 
-
-
+         KService
+         KResponse
+         RequestBody
+         KRequest
+         NetworkError
+         KServiceConfig.
