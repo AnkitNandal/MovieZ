@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>protocol</key>
+	<string>https</string>
+	<key>host</key>
+	<string>api.themoviedb.org</string>
+	<key>application id</key>
+	<string>moviez</string>
+	<key>application version</key>
+	<string>1.0</string>
+	<key>environment</key>
+	<string>iphone</string>
+	<key>apiKey</key>
+	<string>2696829a81b1b5827d515ff121700838</string>
+</dict>
+</plist>
