@@ -4,4 +4,5 @@ use_frameworks!
 target 'Moviez' do
   pod 'Alamofire', '~> 4.7'
   pod 'SDWebImage'
+  pod 'FTLinearActivityIndicator'
 end

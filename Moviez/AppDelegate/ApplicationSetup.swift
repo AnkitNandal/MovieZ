@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import Alamofire
-
+import FTLinearActivityIndicator
 
 class ApplicationSetup {
     
@@ -22,11 +22,12 @@ class ApplicationSetup {
         kNetworkAdapter.shared.startNetworkReachabilityObserver()
         let theme = ThemeManager.currentTheme()
         ThemeManager.applyTheme(theme: theme)
+        UIApplication.configureLinearNetworkActivityIndicatorIfNeeded()
     }
     
     func shouldShowNetworkActivity(_ shouldShow:Bool) {
         DispatchQueue.main.async {
-            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+            UIApplication.shared.isNetworkActivityIndicatorVisible = shouldShow
         }
     }
     

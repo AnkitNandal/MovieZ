@@ -51,6 +51,7 @@ class kNetworkAdapter: NSObject,KOperationDelegate {
 
 extension kNetworkAdapter {
     
+    // Network Avaulability Listner
     func startNetworkReachabilityObserver() {
         
         reachabilityManager?.listener = { status in

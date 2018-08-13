@@ -92,32 +92,3 @@ extension Date {
         return nil
     }
 }
-
-
-fileprivate var ActivityIndicatorViewAssociativeKey = "ActivityIndicatorViewAssociativeKey"
-extension UIView {
-    var activityIndicatorView: UIActivityIndicatorView {
-        get {
-            if let activityIndicatorView = objc_getAssociatedObject(self, &ActivityIndicatorViewAssociativeKey) as? UIActivityIndicatorView {
-                return activityIndicatorView
-            } else {
-                let activityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-                activityIndicatorView.activityIndicatorViewStyle = .white
-                activityIndicatorView.color = .gray
-                self.convert(self.bounds, to: nil)
-                activityIndicatorView.center = CGPoint(x: self.center.x - 20 , y: self.center.y - 20)
-                activityIndicatorView.hidesWhenStopped = true
-                addSubview(activityIndicatorView)
-                
-                objc_setAssociatedObject(self, &ActivityIndicatorViewAssociativeKey, activityIndicatorView, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-                return activityIndicatorView
-            }
-        }
-        
-        set {
-            addSubview(newValue)
-            objc_setAssociatedObject(self, &ActivityIndicatorViewAssociativeKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
-        
-    }
-}

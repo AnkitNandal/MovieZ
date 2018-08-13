@@ -100,7 +100,6 @@ extension SearchViewController {
         
         // Called when search results are fetched
         searchViewModel.searchCompletionBlock = {[weak self] success,errorText in
-            self?.tableView.activityIndicatorView.stopAnimating()
             self?.tableView.reloadData()
             if success {
             } else {
@@ -190,7 +189,6 @@ extension SearchViewController : UISearchBarDelegate,UISearchResultsUpdating,Sea
     }
     
     private func getDataFromSearchTerm(text:String?) {
-        self.tableView.activityIndicatorView.startAnimating()
         searchViewModel.fetchMovieResults(with: text)
         searchController.isActive = false
     }
