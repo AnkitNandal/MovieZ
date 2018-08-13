@@ -52,6 +52,10 @@ class kNetworkAdapter: NSObject,KOperationDelegate {
         serviceCompletionBlock?(data,isError)
     }
     
+    
+    deinit {
+        print("N/W Class Deinit")
+    }
 }
 
 // Shared instance of n/w Adapter Calls

@@ -25,7 +25,7 @@ extension ConfigName  {
         static let fileType = "plist"
     }
     enum Alert {
-        static let noNetwork = "Yao are not connected to n/w!"
+        static let noNetwork = "Yo are not connected to netwoorkk !"
     }
 }
 
