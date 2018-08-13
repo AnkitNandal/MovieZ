@@ -60,7 +60,7 @@ class SearchViewModel {
      */
     func fetchMovieResults(with term:String?) {
         
-        guard let searchTerm = term  else {return}
+        guard let searchTerm = term  else {self.searchCompletionBlock?(true, nil);return }
         
         lastSearchTerm = searchTerm
         

@@ -104,6 +104,7 @@ extension SearchViewController {
         // Called when search results are fetched
         searchViewModel.searchCompletionBlock = {[weak self] success,errorText in
             self?.tableView.reloadData()
+            self?.searchController.searchBar.isUserInteractionEnabled = true
             if success {
             } else {
                 self?.showAlert(with: errorText)
@@ -195,6 +196,7 @@ extension SearchViewController : UISearchBarDelegate,UISearchResultsUpdating,Sea
     }
     
     private func getDataFromSearchTerm(text:String?) {
+        self.searchController.searchBar.isUserInteractionEnabled = false
         searchViewModel.fetchMovieResults(with: text)
         searchController.isActive = false
     }

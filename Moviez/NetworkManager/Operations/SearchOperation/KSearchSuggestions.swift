@@ -10,7 +10,7 @@ import Foundation
 
 class KSearchSuggestions {
     
-    private static var sharedNetworkManager: KSearchSuggestions = {
+    private static var sharedSearchSuggestionManager: KSearchSuggestions = {
         let suggestions = KSearchSuggestions.getSearchSuggestions() as? [String]
         let searchSuggestionsObj = KSearchSuggestions(searchResults: suggestions)
         return searchSuggestionsObj
@@ -30,7 +30,7 @@ class KSearchSuggestions {
 
     // MARK: - Accessors
     class func shared() -> KSearchSuggestions{
-        return sharedNetworkManager
+        return sharedSearchSuggestionManager
     }
     
     // Hold only last 10 results.
@@ -53,12 +53,12 @@ extension KSearchSuggestions {
         let searchTerm = term.lowercased()
         
         if let suggestions = results, suggestions.count > 0 {
-            if results?.contains(searchTerm) == true {
-                results = results?.filter{$0 != searchTerm }
+            if results?.contains(where: {$0.caseInsensitiveCompare(searchTerm) == .orderedSame}) == true {
+                results = results?.filter{$0.lowercased() != searchTerm }
             }
-            results?.insert(searchTerm, at: 0)
+            results?.insert(searchTerm.capitalized, at: 0)
         } else {
-            results = [term]
+            results = [searchTerm.capitalized]
         }
     }
     
