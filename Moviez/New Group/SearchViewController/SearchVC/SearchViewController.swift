@@ -78,7 +78,7 @@ extension SearchViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         if #available(iOS 11.0, *) {
             tableView.contentInsetAdjustmentBehavior = .never
-        } 
+        }
         tableView.register(UINib(nibName: MovieListCell.xib, bundle: nil), forCellReuseIdentifier: MovieListCell.identifier)
     }
     
