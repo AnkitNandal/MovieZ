@@ -24,6 +24,9 @@ extension ConfigName  {
         static let serverPlist = "Server"
         static let fileType = "plist"
     }
+    enum Alert {
+        static let noNetwork = "Yao are not connected to n/w!"
+    }
 }
 
 

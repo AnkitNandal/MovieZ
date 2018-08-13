@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import NotificationBannerSwift
 
 /**
  Network Request Completion Block
@@ -22,6 +23,10 @@ class kNetworkAdapter: NSObject,KOperationDelegate {
     /// ##Singletons should not be used too much##.
     
     static let shared = kNetworkAdapter()
+    
+    // Banner used to show n/w connection status
+    var networkConnectionBanner:StatusBarNotificationBanner?
+    
     
     // We should use our Server for host to listen to reachability
     let reachabilityManager = Alamofire.NetworkReachabilityManager(host: "www.google.com")
@@ -49,9 +54,10 @@ class kNetworkAdapter: NSObject,KOperationDelegate {
     
 }
 
+// Shared instance of n/w Adapter Calls
 extension kNetworkAdapter {
     
-    // Network Avaulability Listner
+    // Network Availability Listner
     func startNetworkReachabilityObserver() {
         
         reachabilityManager?.listener = { status in
@@ -59,21 +65,33 @@ extension kNetworkAdapter {
                 
             case .notReachable:
                 print("The network is not reachable")
-                
+                self.networkDisconnected()
             case .unknown :
                 print("It is unknown whether the network is reachable")
                 
             case .reachable(.ethernetOrWiFi):
                 print("The network is reachable over the WiFi connection")
+                self.networkReConnected()
                 
             case .reachable(.wwan):
                 print("The network is reachable over the WWAN connection")
-                
+                self.networkReConnected()
             }
         }
         
         // start listening
         reachabilityManager?.startListening()
+    }
+    
+    func networkDisconnected() {
+        networkConnectionBanner = StatusBarNotificationBanner(title: ConfigName.Alert.noNetwork, style: .warning)
+        networkConnectionBanner?.show()
+    }
+    
+    func networkReConnected() {
+        guard networkConnectionBanner != nil else {return}
+        networkConnectionBanner?.dismiss()
+        networkConnectionBanner = nil
     }
 }
 
