@@ -23,6 +23,7 @@
 		2967CB21212143F700C1C6DC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967CB20212143F700C1C6DC /* Constants.swift */; };
 		2967CB232121452300C1C6DC /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967CB222121452300C1C6DC /* ViewControllers.swift */; };
 		2967CB252121731500C1C6DC /* kNetworkAdapter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967CB242121731500C1C6DC /* kNetworkAdapter+Extensions.swift */; };
+		2967CB2B2121A05E00C1C6DC /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2967CB2A2121A05E00C1C6DC /* CommonFunctions.swift */; };
 		297CB63B2117024800E39484 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297CB63A2117024800E39484 /* Extensions.swift */; };
 		297CB64B211C6A6100E39484 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297CB64A211C6A6100E39484 /* SearchViewModel.swift */; };
 		297CB64F211C6B0600E39484 /* KService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297CB64E211C6B0600E39484 /* KService.swift */; };
@@ -75,6 +76,7 @@
 		2967CB20212143F700C1C6DC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2967CB222121452300C1C6DC /* ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers.swift; sourceTree = "<group>"; };
 		2967CB242121731500C1C6DC /* kNetworkAdapter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "kNetworkAdapter+Extensions.swift"; sourceTree = "<group>"; };
+		2967CB2A2121A05E00C1C6DC /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
 		297CB63A2117024800E39484 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		297CB64A211C6A6100E39484 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		297CB64E211C6B0600E39484 /* KService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KService.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				297CB63A2117024800E39484 /* Extensions.swift */,
 				2967CB1E212143B100C1C6DC /* SkinManager.swift */,
 				2967CB20212143F700C1C6DC /* Constants.swift */,
+				2967CB2A2121A05E00C1C6DC /* CommonFunctions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				297CB661211C6D2800E39484 /* KSearchSuggestions.swift in Sources */,
 				297CB64B211C6A6100E39484 /* SearchViewModel.swift in Sources */,
 				297CB651211C6B2F00E39484 /* KResponse.swift in Sources */,
+				2967CB2B2121A05E00C1C6DC /* CommonFunctions.swift in Sources */,
 				297CB674211C7FCB00E39484 /* ApplicationSetup.swift in Sources */,
 				2956C5712109A2D30020A18C /* AppDelegate.swift in Sources */,
 				297CB64F211C6B0600E39484 /* KService.swift in Sources */,
